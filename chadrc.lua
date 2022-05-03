@@ -15,6 +15,7 @@ M.plugins = {
    override = {
       ["kyazdani42/nvim-tree.lua"] = plugin_conf.nvimtree,
       ["nvim-treesitter/nvim-treesitter"] = plugin_conf.treesitter,
+      ["NvChad/nvim-colorizer.lua"] = plugin_conf.colorizer,
       ["nvim-telescope/telescope.nvim"] = plugin_conf.telescope,
    },
 
