@@ -1,6 +1,26 @@
 -- make sure you maintain the structure of `core/default_config.lua` here,
 local M = {}
 
+vim.g.nvim_tree_icons = {
+   default = "",
+   symlink = "",
+   git = {
+      ignored = "◌",
+      renamed = "➜",
+      staged = "✓",
+      unmerged = "",
+      unstaged = "",
+      untracked = "★",
+   },
+   folder = {
+      default = "",
+      empty = "",
+      empty_open = "",
+      open = " ",
+      symlink = "",
+      symlink_open = "",
+   },
+}
 local plugin_conf = require "custom.plugins.configs"
 local userPlugins = require "custom.plugins"
 
