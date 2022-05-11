@@ -1,5 +1,4 @@
 return {
-  ['williamboman/nvim-lsp-installer'] = {},
   ["windwp/nvim-ts-autotag"] = {
     ft = { "html", "javascriptreact" },
     after = "nvim-treesitter",
@@ -15,14 +14,8 @@ return {
     end,
   },
 
-  ["nvim-telescope/telescope-media-files.nvim"] = {
-    after = "telescope.nvim",
-    config = function()
-      require("telescope").load_extension "media_files"
-    end,
-  },
   ["nvim-lualine/lualine.nvim"] = {},
-  ["folke/which-key.nvim"] = {},
+  -- ["folke/which-key.nvim"] = {},
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
