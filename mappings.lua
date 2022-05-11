@@ -1,6 +1,6 @@
 -- MAPPINGS
-local map = require("core.utils").map
-local cmd = vim.cmd
+local map = nvchad.map
+-- local cmd = vim.cmd
 
 map("n", "<leader>cc", ":Telescope <CR>")
 map("n", "<leader>q", ":q <CR>")

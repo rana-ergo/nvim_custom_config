@@ -7,8 +7,7 @@ hop.setup {
   keys = 'etovxqpdygfblzhckisuran'
 }
 
-
-local map = require("core.utils").map
+local map = nvchad.map
 
 -- Hop key mapping
 map("n", "s", "<cmd>lua require'hop'.hint_words()<cr>")
