@@ -4,6 +4,7 @@ local map = nvchad.map
 
 map("n", "<leader>cc", ":Telescope <CR>")
 map("n", "<leader>q", ":q <CR>")
+map("n", "<leader>w", ":w <CR>")
 map("n", "<C-q>", "<cmd> :q! <CR>") -- ctrl + q to exit without save buffer/file
 
 -- Resize with arrows

@@ -44,7 +44,7 @@ M.plugins = {
 
 M.ui = {
    theme = "onedark",
-   transparency = true,
+   transparency = false,
 }
 
 return M
