@@ -30,11 +30,6 @@ M.setup_lsp = function(attach, capabilities)
     lspconfig[lsp].setup {
       on_attach = function(client, bufnr)
         attach(client, bufnr)
-        -- change gopls server capabilities
-        if lsp == "pyright" then
-          client.resolved_capabilities.document_formatting = true
-          client.resolved_capabilities.document_range_formatting = true
-        end
       end,
       capabilities = capabilities,
       settings = {
