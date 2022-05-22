@@ -26,6 +26,9 @@ M.nvimtree = {
    git = {
       enable = true,
    },
+   view = {
+      width = 30,
+   },
 }
 
 M.gitsigns = {
@@ -38,6 +41,31 @@ M.colorizer = {
          RRGGBBAA = true, -- #RRGGBBAA hex codes
          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
       },
+}
+
+M.statusline = {
+  lsp_icon = {
+    provider = ""
+    -- provider = {
+    --   name = 'file_info',
+    --   opts = {
+    --     type = 'relative'
+    --   }
+    -- },
+    -- provider = function()
+    --   if next(vim.lsp.buf_get_clients()) ~= nil then
+    --     local lsp_name = vim.lsp.get_active_clients()[1].name
+    --     return "  " .. lsp_name .. " "
+    --   else
+    --     return ""
+    --   end
+    -- end,
+  },
+
+  current_line = {
+    provider = "position"
+  }
+
 }
 
 M.telescope = {
