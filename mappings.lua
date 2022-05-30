@@ -1,39 +1,63 @@
 -- MAPPINGS
-local map = nvchad.map
--- local cmd = vim.cmd
+local M = {}
 
-map("n", "<leader>cc", ":Telescope <CR>")
-map("n", "<leader>q", ":q <CR>")
-map("n", "<leader>w", ":w <CR>")
-map("n", "<C-q>", "<cmd> :q! <CR>") -- ctrl + q to exit without save buffer/file
+M.disabled = {
+  n = {
+    ["<leader>e"] = ""
+  }
+}
 
--- Resize with arrows
-map("n", "<C-Up>", ":resize -2<CR>")
-map("n", "<C-Down>", ":resize +2<CR>")
-map("n", "<C-Left>", ":vertical resize -2<CR>")
-map("n", "<C-Right>", ":vertical resize +2<CR>")
+M.global = {
+  n = {
+    ["<leader>q"] = { "<cmd> q <CR>", " Close Buffer" },
+    ["<leader>w"] = { "<cmd> w <CR>", "   Save Buffer" },
+    ["<C-q>"] = { "<cmd> q! <CR>", "   Close Buffer without Saving" },
+    -- Resize with arrows
+    ["<C-Up>"] = { "<cmd> resize -2 <CR>", "   ^^" },
+    ["<C-Down>"] = { "<cmd> resize +2 <CR>", "   ~^" },
+    ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "   <<" },
+    ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "   >>" },
+    -- Jump scrolling
+    ["<C-j>"] = { "<cmd> 4j <CR>", "Fast Scroll Down" },
+    ["<C-k>"] = { "<cmd> 4k <CR>", "Fast Scroll Up" },
+  },
 
--- Move text up and down
-map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
-map("v", "<A-j>", ":m .+1<CR>==")
-map("v", "<A-k>", ":m .-2<CR>==")
-map("x", "<A-j>", ":move '>+1<CR>gv-gv")
-map("x", "<A-k>", ":move '<-2<CR>gv-gv")
+  v = {
+    -- Jump scrolling
+    ["<C-j>"] = { "<cmd> 4j <CR>", "Fast Scroll Down" },
+    ["<C-k>"] = { "<cmd> 4k <CR>", "Fast Scroll Up" },
+  },
 
--- jump scrolling 
-map("n", "<C-j>", "4j")
-map("n", "<C-k>", "4k")
-map("v", "<C-j>", "4j")
-map("v", "<C-k>", "4k")
+}
 
-map("n", "<C-e>", "<cmd> :NvimTreeToggle <CR>")
--- map("n", "<leader>e", "<cmd> :NvimTreeToggle <CR>")
+-- Plugin Based Mappings
 
--- Telescope
-map("n", "<leader>ff", ":Telescope find_files <CR>")
-map("n", "<leader>ft", ":Telescope live_grep <CR>")
+M.nvimtree = {
+  n = {
+    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "   Tree Toggle" },
+  },
+}
 
-map("n", "<C-f>", ":lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 }))<CR>")
-map("v", "<C-f>", ":lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({ winblend = 10 }))<CR>")
-map("i", "<C-f>", "<Esc>:lua require'telescope.builtin'.grep_string(require('telescope.themes').get_cursor({ winblend = 10 }))<CR>")
+M.telescope = {
+  n = {
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
+    ["<leader>ft"] = { "<cmd> Telescope live_grep <CR>", "   Find Text" },
+    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "   Find Word" },
+    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "   Find String" },
+  },
+  v = {
+    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_dropdown({ winblend = 10 })) <CR>", "   Find String" },
+  },
+  i = {
+    ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_cursor({ winblend = 10 })) <CR>", "   Find String" },
+  },
+}
+-- -- Move text up and down
+-- map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
+-- map("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
+-- map("v", "<A-j>", ":m .+1<CR>==")
+-- map("v", "<A-k>", ":m .-2<CR>==")
+-- map("x", "<A-j>", ":move '>+1<CR>gv-gv")
+-- map("x", "<A-k>", ":move '<-2<CR>gv-gv")
+--
+return M

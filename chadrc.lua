@@ -35,6 +35,8 @@ M.plugins = {
    user = userPlugins,
 }
 
+M.mappings = require "custom.mappings"
+
 M.ui = {
    theme = "onedark",
    transparency = false,
