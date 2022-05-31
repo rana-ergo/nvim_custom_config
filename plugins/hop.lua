@@ -6,13 +6,3 @@ end
 hop.setup {
   keys = 'etovxqpdygfblzhckisuran'
 }
-
-local map = nvchad.map
-
--- Hop key mapping
-map("n", "s", "<cmd>lua require'hop'.hint_words()<cr>")
-map("n", ",", "<cmd>lua require'hop'.hint_lines()<cr>")
-map("v", "s", "<cmd>lua require'hop'.hint_words()<cr>")
-map("v", ",", "<cmd>lua require'hop'.hint_lines()<cr>")
-map("i", "<A-s>", "<ESC>:lua require'hop'.hint_words()<CR>")
-
