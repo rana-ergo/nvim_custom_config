@@ -29,6 +29,7 @@ M.plugins = {
       ["NvChad/nvim-colorizer.lua"] = plugin_conf.colorizer,
       ["nvim-telescope/telescope.nvim"] = plugin_conf.telescope,
       ["feline-nvim/feline.nvim"] = plugin_conf.statusline,
+      ["folke/which-key.nvim"] = plugin_conf.whichkey,
       -- ["wbthomason/packer.nvim"] = { snapshot = "stable_chad" },
    },
 
