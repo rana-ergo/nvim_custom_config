@@ -6,6 +6,8 @@ M.disabled = {
     ["<leader>e"] = "",
     ["<leader>D"] = "",
     ["<leader>w"] = "",
+    ["<leader>f"] = "",
+    ["<leader>p"] = "",
   }
 }
 
@@ -13,21 +15,14 @@ M.global = {
   n = {
     ["<leader>w"] = { "<cmd> w! <CR>", "   Save Buffer" },
     ["<C-q>"] = { "<cmd> q! <CR>", "   Close Buffer without Saving" },
-    -- ["<leader>h"] = { "<cmd> nohlsearch <CR>", "No Highlight" },
     -- Resize with arrows
     ["<C-Up>"] = { "<cmd> resize -2 <CR>", "ﭕ   ^^" },
     ["<C-Down>"] = { "<cmd> resize +2 <CR>", "ﭕ   ~^" },
     ["<C-Left>"] = { "<cmd> vertical resize -2 <CR>", "ﭕ   <<" },
     ["<C-Right>"] = { "<cmd> vertical resize +2 <CR>", "ﭕ   >>" },
-    -- Jump scrolling
-    -- ["<C-j>"] = { "<cmd> 4j <CR>", "Fast Scroll Down" },
-    -- ["<C-k>"] = { "<cmd> 4k <CR>", "Fast Scroll Up" },
   },
 
   v = {
-    -- Jump scrolling
-    ["<C-j>"] = { "<cmd> 4j <CR>", "省   Fast Scroll Down" },
-    ["<C-k>"] = { "<cmd> 4k <CR>", "省   Fast Scroll Up" },
   },
 
 }
@@ -42,8 +37,9 @@ M.nvimtree = {
 
 M.telescope = {
   n = {
+    ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", " Find" },
     ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
-    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "   Find Files" },
+    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "  Find Files" },
     ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "   Find String" },
   },
 
@@ -68,10 +64,23 @@ M.hop = {
   },
 
   i = {
-    ["<A-s>"] = { "<ESC>:lua require'hop'.hint_words()<CR>", "   Go There"}
+    ["<A-s>"] = { "<ESC>:lua require'hop'.hint_words()<CR>", "   Go There" }
   }
 
 }
+
+M.packer = {
+  n = {
+    ["<leader>p"] = { "<cmd> PackerSync <CR>", "   Packer" },
+    ["<leader>ps"] = { "<cmd> PackerSync <CR>", "痢  Sync" },
+    ["<leader>pc"] = { "<cmd> PackerCompile <CR>", "ﰩ   Compile" },
+    ["<leader>pi"] = { "<cmd> PackerInstall <CR>", "   Install" },
+    ["<leader>pu"] = { "<cmd> PackerUpdate <CR>", "   Update" },
+    ["<leader>pS"] = { "<cmd> PackerUpdate <CR>", "   Status" },
+  }
+}
+
+
 
 -- -- Move text up and down
 -- map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
