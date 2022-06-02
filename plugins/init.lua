@@ -1,3 +1,8 @@
+-- user plugin configs!
+require "custom.plugins.hop"
+
+
+-- user plugin init
 return {
   ["goolord/alpha-nvim"] = {
     disable = true,

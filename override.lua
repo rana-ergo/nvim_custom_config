@@ -1,8 +1,3 @@
--- user plugin configs!
-require "custom.plugins.hop"
--- require "custom.plugins.whichkey"
-
-
 -- overriding default plugin configs!
 local M = {}
 

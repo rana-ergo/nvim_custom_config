@@ -1,7 +1,7 @@
 -- make sure you maintain the structure of `core/default_config.lua` here,
 local M = {}
 
-local plugin_conf = require "custom.plugins.configs"
+local override = require "custom.override"
 local userPlugins = require "custom.plugins"
 
 M.options = {
@@ -24,12 +24,12 @@ M.plugins = {
    remove = {},
 
    override = {
-      ["kyazdani42/nvim-tree.lua"] = plugin_conf.nvimtree,
-      ["nvim-treesitter/nvim-treesitter"] = plugin_conf.treesitter,
-      ["NvChad/nvim-colorizer.lua"] = plugin_conf.colorizer,
-      ["nvim-telescope/telescope.nvim"] = plugin_conf.telescope,
-      ["feline-nvim/feline.nvim"] = plugin_conf.statusline,
-      ["folke/which-key.nvim"] = plugin_conf.whichkey,
+      ["kyazdani42/nvim-tree.lua"] = override.nvimtree,
+      ["nvim-treesitter/nvim-treesitter"] = override.treesitter,
+      ["NvChad/nvim-colorizer.lua"] = override.colorizer,
+      ["nvim-telescope/telescope.nvim"] = override.telescope,
+      ["feline-nvim/feline.nvim"] = override.statusline,
+      ["folke/which-key.nvim"] = override.whichkey,
       -- ["wbthomason/packer.nvim"] = { snapshot = "stable_chad" },
    },
 
