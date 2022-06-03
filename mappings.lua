@@ -37,7 +37,7 @@ M.nvimtree = {
 M.telescope = {
   n = {
     ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },
-    ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
+    ["<leader>s"] = { "<cmd> Telescope live_grep <CR>", "   Live Search" },
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "  Find Files" },
     ["<C-f>"] = { "<cmd> lua require'telescope.builtin'.grep_string(require('telescope.themes').get_ivy({ winblend = 10 })) <CR>", "   Find String" },
   },

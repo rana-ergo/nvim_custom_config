@@ -2,28 +2,28 @@
 local M = {}
 
 M.treesitter = {
-   ensure_installed = {
-      "vim",
-      "python",
-      "html",
-      "css",
-      "javascript",
-      "json",
-      "toml",
-      "markdown",
-      "c",
-      "bash",
-      "lua",
-   },
+  ensure_installed = {
+    "vim",
+    "python",
+    "html",
+    "css",
+    "javascript",
+    "json",
+    "toml",
+    "markdown",
+    "c",
+    "bash",
+    "lua",
+  },
 }
 
 M.nvimtree = {
-   git = {
-      enable = true,
-   },
-   view = {
-      width = 30,
-   },
+  git = {
+    enable = true,
+  },
+  view = {
+    width = 30,
+  },
 }
 
 M.gitsigns = {
@@ -39,22 +39,8 @@ M.colorizer = {
 }
 
 M.statusline = {
-  lsp_icon = {
+  lsp_status = {
     provider = ""
-    -- provider = {
-    --   name = 'file_info',
-    --   opts = {
-    --     type = 'relative'
-    --   }
-    -- },
-    -- provider = function()
-    --   if next(vim.lsp.buf_get_clients()) ~= nil then
-    --     local lsp_name = vim.lsp.get_active_clients()[1].name
-    --     return "  " .. lsp_name .. " "
-    --   else
-    --     return ""
-    --   end
-    -- end,
   },
 
   current_line = {
@@ -64,12 +50,12 @@ M.statusline = {
 }
 
 M.telescope = {
-   extensions = {
-     -- fd is needed
-      media_files = {
-         filetypes = { "png", "webp", "jpg", "jpeg" },
-      },
-   },
+  extensions = {
+    -- fd is needed
+    media_files = {
+      filetypes = { "png", "webp", "jpg", "jpeg" },
+    },
+  },
 }
 
 M.whichkey = {
