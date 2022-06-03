@@ -34,6 +34,11 @@ M.nvimtree = {
   },
 }
 
+M.lazygit = {
+  n = {
+    ["<leader>gg"] = { "<cmd> LazyGit <CR>", "   LazyGit"}
+  }
+}
 M.telescope = {
   n = {
     ["<leader>f"] = { "<cmd> Telescope live_grep <CR>", "   Find" },

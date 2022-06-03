@@ -27,4 +27,10 @@ return {
   ['nvim-telescope/telescope-fzf-native.nvim'] = {},
   ['phaazon/hop.nvim'] = {},
   ['mg979/vim-visual-multi'] = {},
+  ["nvim-telescope/telescope.nvim"] = {
+    requires = { { "nvim-lua/plenary.nvim" }, { "kdheepak/lazygit.nvim" } },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  }
 }
